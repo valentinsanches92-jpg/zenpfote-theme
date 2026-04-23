@@ -712,3 +712,98 @@
   .zp2 .bcard-img { width: 72px; height: 60px; }
   .zp2 .hero-title { font-size: 34px; }
 }
+
+/* ── STEPS SECTION (4 étapes) ── */
+.zp2 .steps-section { background: #fff; }
+.zp2 .steps-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px; margin-top: 48px;
+}
+.zp2 .step-card { display: flex; flex-direction: column; gap: 16px; }
+.zp2 .step-img-wrap {
+  position: relative; border-radius: var(--r-lg);
+  overflow: hidden; aspect-ratio: 3/4;
+  background: var(--bg-light); border: 1px solid var(--border);
+}
+.zp2 .step-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.zp2 .step-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 10px; color: var(--text-muted);
+  font-size: 13px; text-align: center; padding: 16px;
+}
+.zp2 .step-img-placeholder .ph-icon { font-size: 40px; }
+.zp2 .step-num-badge {
+  position: absolute; bottom: 14px; right: 14px;
+  width: 44px; height: 44px; border-radius: var(--r-md);
+  background: var(--blue); color: var(--navy);
+  font-size: 22px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(93,205,255,0.4);
+}
+.zp2 .step-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px; color: var(--navy); line-height: 1.25;
+}
+.zp2 .step-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+
+@media (max-width: 900px) { .zp2 .steps-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .zp2 .steps-grid { grid-template-columns: 1fr; } }
+
+/* ── SOCIAL PROOF GALLERY ── */
+.zp2 .social-proof-section { background: var(--bg-light); }
+.zp2 .social-proof-layout {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 56px; align-items: center;
+}
+.zp2 .social-proof-text h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 3.5vw, 46px);
+  color: var(--blue-dark); line-height: 1.15; margin-bottom: 16px;
+}
+.zp2 .social-proof-text p {
+  font-size: 16px; color: var(--text-mid); line-height: 1.7; margin-bottom: 28px; max-width: 440px;
+}
+.zp2 .social-proof-text .btn-claim {
+  display: block; width: 100%; max-width: 400px;
+  padding: 18px 32px; border: none; border-radius: var(--r-full);
+  background: var(--blue); color: var(--navy);
+  font-size: 15px; font-weight: 900; letter-spacing: 0.07em;
+  text-transform: uppercase; cursor: pointer; text-align: center;
+  transition: background 0.2s, transform 0.15s; text-decoration: none;
+  box-shadow: var(--shadow-md);
+}
+.zp2 .social-proof-text .btn-claim:hover { background: var(--blue-dark); color: #fff; transform: translateY(-2px); }
+.zp2 .social-proof-text .rating-line {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 14px; font-size: 13px; color: var(--text-muted);
+}
+.zp2 .social-proof-text .rating-line .stars-row { color: var(--gold); font-size: 15px; }
+
+.zp2 .social-proof-gallery {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 12px; overflow: hidden;
+}
+.zp2 .gallery-photo {
+  border-radius: var(--r-md); overflow: hidden;
+  aspect-ratio: 3/4; background: var(--border);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.zp2 .gallery-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.zp2 .gallery-photo-ph {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 8px; color: var(--text-muted); font-size: 12px; text-align: center; padding: 12px;
+}
+.zp2 .gallery-photo:first-child { grid-row: span 1; aspect-ratio: 3/4; }
+.zp2 .gallery-photo:nth-child(2) { aspect-ratio: 3/4; }
+.zp2 .gallery-photo:nth-child(3) {
+  aspect-ratio: auto; height: 100%; display: none;
+}
+/* 2-col gallery on mobile */
+@media (max-width: 900px) {
+  .zp2 .social-proof-layout { grid-template-columns: 1fr; gap: 32px; }
+  .zp2 .social-proof-gallery { grid-template-columns: repeat(2, 1fr); }
+  .zp2 .gallery-photo:nth-child(3) { display: flex; }
+}
