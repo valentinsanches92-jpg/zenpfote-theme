@@ -129,10 +129,9 @@
 }
 
 /* ── HERO ── */
-.zp2 .hero-swiper { width: 100%; }
 .zp2 .hero-slide {
   background: var(--bg-light);
-  display: grid !important; grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr;
   min-height: calc(100vh - 100px); align-items: center;
 }
 .zp2 .hero-text { padding: 64px 48px 64px 64px; }
