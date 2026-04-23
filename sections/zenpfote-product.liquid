@@ -1,0 +1,470 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+{{ 'zenpfote-v2.css' | asset_url | stylesheet_tag }}
+
+<div class="zp2">
+
+  <!-- ══════════════════════════════════════════
+       ANNOUNCEMENT BAR
+  ══════════════════════════════════════════ -->
+  <div class="ann-bar">
+    <div class="ann-slides">
+      <div class="ann-slide">🚚 <b>Kostenloser Versand</b> ab 49 € — Lieferung in 1–3 Werktagen</div>
+      <div class="ann-slide">🔄 <b>60 Tage Geld-zurück-Garantie</b> — Kein Risiko</div>
+      <div class="ann-slide">🌿 FRÜHLINGSANGEBOT — <b>bis zu 52% Rabatt</b> auf alle Bundles</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════ -->
+  <nav class="nav">
+    <a href="{{ routes.root_url }}" class="nav-logo">🐾 <span>Zen</span>Pfote</a>
+    <ul class="nav-links">
+      <li><a href="{{ routes.root_url }}#wie-es-funktioniert">Wie es funktioniert</a></li>
+      <li><a href="{{ routes.root_url }}#bewertungen">Bewertungen</a></li>
+      <li><a href="{{ routes.root_url }}#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-cart-btn">🛒 Warenkorb</button>
+      <button class="nav-hamburger" aria-label="Menü">☰</button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       MOBILE MENU
+  ══════════════════════════════════════════ -->
+  <div class="mobile-menu" role="dialog" aria-modal="true">
+    <div class="mobile-menu-panel">
+      <button class="mobile-menu-close" aria-label="Schließen">✕</button>
+      <a href="{{ routes.root_url }}" class="nav-logo">🐾 <span>Zen</span>Pfote</a>
+      <ul class="mobile-nav-links">
+        <li><a href="{{ routes.root_url }}">Startseite</a></li>
+        <li><a href="{{ routes.root_url }}#wie-es-funktioniert">Wie es funktioniert</a></li>
+        <li><a href="{{ routes.root_url }}#bewertungen">Bewertungen</a></li>
+        <li><a href="{{ routes.root_url }}#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       BREADCRUMB
+  ══════════════════════════════════════════ -->
+  <div style="background:#fff;border-bottom:1px solid var(--border);padding:12px 0;">
+    <div class="container">
+      <nav style="font-size:13px;color:var(--text-muted);">
+        <a href="{{ routes.root_url }}" style="color:var(--blue-dark);">Startseite</a>
+        <span style="margin:0 8px;">›</span>
+        <span style="color:var(--text);">ZenPfote Pup Bowl</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PRODUCT SECTION — MEDIA + INFO
+  ══════════════════════════════════════════ -->
+  <section class="section-wrap" style="padding-top:40px;">
+    <div class="container">
+      <div class="product-layout">
+
+        <!-- ── LEFT: MEDIA COLUMN ── -->
+        <div class="media-col">
+          <!-- Main viewer -->
+          <div class="media-main" id="zp-media-main">
+            <!-- EMPLACEMENT IMAGE PRINCIPALE PRODUIT -->
+            <div class="media-main-ph">
+              <div class="ph-icon">📸</div>
+              <p style="font-size:14px;font-weight:600;margin-top:8px;color:var(--text-mid);">Hauptproduktbild</p>
+              <small style="font-size:12px;color:var(--text-muted);">Empfohlen: 800×800px</small>
+            </div>
+          </div>
+
+          <!-- Thumbnail strip -->
+          <div class="media-thumbs" id="zp-thumb-strip">
+            <div class="thumb-item active" data-type="img">
+              <div style="text-align:center;font-size:10px;color:var(--text-muted);">📸<br>Foto 1</div>
+            </div>
+            <div class="thumb-item" data-type="img">
+              <div style="text-align:center;font-size:10px;color:var(--text-muted);">📸<br>Foto 2</div>
+            </div>
+            <div class="thumb-item" data-type="img">
+              <div style="text-align:center;font-size:10px;color:var(--text-muted);">📸<br>Foto 3</div>
+            </div>
+            <div class="thumb-item" data-type="img">
+              <div style="text-align:center;font-size:10px;color:var(--text-muted);">📸<br>Foto 4</div>
+            </div>
+            <div class="thumb-item is-video" data-type="video" style="position:relative;">
+              <div style="text-align:center;font-size:10px;color:var(--text-muted);">🎬<br>Video</div>
+            </div>
+          </div>
+
+          <!-- Guarantee badges below media -->
+          <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-mid);">🔒 SSL-sicher</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-mid);">🔄 60T. Garantie</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-mid);">🚚 DE-Versand</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-mid);">🏥 Tierarzt-empfohlen</div>
+          </div>
+        </div>
+
+        <!-- ── RIGHT: PRODUCT INFO ── -->
+        <div class="product-info">
+
+          <!-- Stars + Reviews -->
+          <div class="product-stars-row">
+            <span class="stars-row">★★★★★</span>
+            <span class="product-review-count">4,7/5 (48.219 Bewertungen)</span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="product-title">ZenPfote Pup Bowl —<br>Der Anti-Angst Leckerball</h1>
+
+          <!-- Price -->
+          <div class="product-price-row">
+            <div class="price-now">29,90 €</div>
+            <div class="price-was">62,90 €</div>
+            <div class="price-badge">−52%</div>
+          </div>
+
+          <!-- Short description -->
+          <p style="font-size:15px;color:var(--text-mid);line-height:1.7;border-left:3px solid var(--blue);padding-left:14px;">
+            Der rotierende 360°-Ball beschäftigt deinen Hund 30–60 Minuten und aktiviert die natürliche Endorphin-Ausschüttung. Kein CBD. Keine Chemie. Nur Biologie.
+          </p>
+
+          <!-- Bundle selector -->
+          <div>
+            <p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;">PAKET WÄHLEN:</p>
+            <div class="bundle-cards" style="gap:12px;">
+
+              <!-- 1 Stück -->
+              <div class="bcard">
+                <div class="bcard-main" style="padding:14px 16px;">
+                  <div class="bcard-radio"><div class="bcard-radio-dot"></div></div>
+                  <div class="bcard-info">
+                    <div class="bcard-name" style="font-size:14px;">1 ZenPfote Leckerball</div>
+                    <span class="bcard-save">Spare 33 € · 36% Rabatt</span>
+                  </div>
+                  <div class="bcard-prices">
+                    <div class="bcard-now" style="font-size:22px;">29,90 €</div>
+                    <div class="bcard-was">62,90 €</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2 Stück -->
+              <div class="bcard sel">
+                <div class="bcard-flag" style="font-size:9px;">⭐ BELIEBTESTE WAHL</div>
+                <div class="bcard-main" style="padding:14px 16px;">
+                  <div class="bcard-radio"><div class="bcard-radio-dot"></div></div>
+                  <div class="bcard-info">
+                    <div class="bcard-name" style="font-size:14px;">2 ZenPfote Leckerbälle</div>
+                    <span class="bcard-save">Spare 76 € · 45% Rabatt</span>
+                  </div>
+                  <div class="bcard-prices">
+                    <div class="bcard-now" style="font-size:22px;">49,90 €</div>
+                    <div class="bcard-was">110 €</div>
+                  </div>
+                </div>
+                <div class="bcard-addons">
+                  <div class="addon-row on">
+                    <div class="addon-cb">✓</div>
+                    <div class="addon-thumb" style="font-size:16px;">🛡️</div>
+                    <div class="addon-label"><strong>Transportversicherung</strong><small>Schutz bei Verlust/Beschädigung</small></div>
+                    <div class="addon-price"><div class="ap-now">2,99 €</div><div class="ap-was">4,99 €</div></div>
+                  </div>
+                  <div class="addon-row on">
+                    <div class="addon-cb">✓</div>
+                    <div class="addon-thumb" style="font-size:16px;">📖</div>
+                    <div class="addon-label"><strong>+ Rezeptbuch (60% Rabatt)</strong><small>50 Leckerrezepte</small></div>
+                    <div class="addon-price"><div class="ap-now">9,90 €</div><div class="ap-was">24,90 €</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 Stück -->
+              <div class="bcard">
+                <div class="bcard-flag gold" style="font-size:9px;">🔥 BESTES PREIS-LEISTUNGS-VERHÄLTNIS</div>
+                <div class="bcard-main" style="padding:14px 16px;">
+                  <div class="bcard-radio"><div class="bcard-radio-dot"></div></div>
+                  <div class="bcard-info">
+                    <div class="bcard-name" style="font-size:14px;">3 ZenPfote Leckerbälle</div>
+                    <span class="bcard-save">Spare 124 € · 52% Rabatt</span>
+                  </div>
+                  <div class="bcard-prices">
+                    <div class="bcard-now" style="font-size:22px;">64,90 €</div>
+                    <div class="bcard-was">165 €</div>
+                  </div>
+                </div>
+                <div class="bcard-addons">
+                  <div class="addon-row"><div class="addon-cb"></div><div class="addon-thumb" style="font-size:16px;">🧸</div><div class="addon-label"><strong>+ Beruhigungs-Spielzeug</strong><small>GRATIS (Wert: 19,90 €)</small></div><div class="addon-price"><div class="ap-free">GRATIS</div></div></div>
+                  <div class="addon-row"><div class="addon-cb"></div><div class="addon-thumb" style="font-size:16px;">🦆</div><div class="addon-label"><strong>+ Enten-Kuscheltier</strong><small>GRATIS (Wert: 14,90 €)</small></div><div class="addon-price"><div class="ap-free">GRATIS</div></div></div>
+                  <div class="addon-row"><div class="addon-cb"></div><div class="addon-thumb" style="font-size:16px;">🪮</div><div class="addon-label"><strong>+ Leckmatte</strong><small>GRATIS (Wert: 24,90 €)</small></div><div class="addon-price"><div class="ap-free">GRATIS</div></div></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ADD TO CART -->
+          <div>
+            <button class="btn-cart" style="margin-bottom:12px;">🛒 In den Warenkorb legen</button>
+            <button class="btn-navy" style="width:100%;padding:16px;">⚡ Direkt kaufen</button>
+          </div>
+
+          <!-- Trust + Pay -->
+          <div class="trust-chips" style="justify-content:flex-start;">
+            <span class="trust-chip-sm">🔒 SSL-verschlüsselt</span>
+            <span class="trust-chip-sm">🔄 60 Tage Geld-zurück</span>
+            <span class="trust-chip-sm">🚚 1–3 Werktage</span>
+          </div>
+          <div class="pay-logos" style="justify-content:flex-start;margin-top:12px;">
+            <div class="pay-logo"><svg viewBox="0 0 80 24" fill="none"><text x="4" y="18" font-family="Arial" font-size="14" font-weight="900" fill="#003087">Pay</text><text x="36" y="18" font-family="Arial" font-size="14" font-weight="900" fill="#009cde">Pal</text></svg></div>
+            <div class="pay-logo"><svg viewBox="0 0 60 24" fill="none"><text x="4" y="18" font-family="Arial" font-size="13" font-weight="900" fill="#1a1f71">VISA</text></svg></div>
+            <div class="pay-logo"><svg viewBox="0 0 80 24" fill="none"><circle cx="16" cy="12" r="10" fill="#EB001B" opacity="0.9"/><circle cx="30" cy="12" r="10" fill="#F79E1B" opacity="0.9"/></svg></div>
+            <div class="pay-logo"><svg viewBox="0 0 80 24" fill="none"><text x="4" y="17" font-family="Arial" font-size="12" font-weight="700" fill="#ff69b4">klarna</text></svg></div>
+            <div class="pay-logo"><svg viewBox="0 0 70 24" fill="none"><text x="4" y="17" font-family="Arial" font-size="10" font-weight="700" fill="#333">Apple Pay</text></svg></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PRODUCT TABS
+  ══════════════════════════════════════════ -->
+  <section class="section-wrap section-wrap--light" style="padding-top:40px;">
+    <div class="container">
+      <div class="product-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="tab-desc">Beschreibung</button>
+          <button class="tab-btn" data-tab="tab-mat">Materialien</button>
+          <button class="tab-btn" data-tab="tab-rev">Bewertungen</button>
+          <button class="tab-btn" data-tab="tab-faq">FAQ</button>
+        </div>
+
+        <!-- Description -->
+        <div class="tab-panel active" id="tab-desc">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+            <div>
+              <h3 style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy);margin-bottom:16px;">Wie ZenPfote funktioniert</h3>
+              <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:16px;">Der einzigartige 360°-Drehmechanismus des ZenPfote Pup Bowl hält deinen Hund bis zu 60 Minuten beschäftigt. Ausdauerndes Lecken stimuliert die Ausschüttung körpereigener Endorphine – der gleiche Effekt wie ein intensiver Spaziergang.</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+                <li style="display:flex;gap:10px;font-size:14px;color:var(--text-mid);"><span style="color:var(--blue);font-weight:700;">✓</span> Füllung mit Erdnussbutter, Joghurt oder Nassfutter</li>
+                <li style="display:flex;gap:10px;font-size:14px;color:var(--text-mid);"><span style="color:var(--blue);font-weight:700;">✓</span> Rotierender Ball verhindert schnelles Auslecken</li>
+                <li style="display:flex;gap:10px;font-size:14px;color:var(--text-mid);"><span style="color:var(--blue);font-weight:700;">✓</span> Endorphin-Ausschüttung beruhigt natürlich</li>
+                <li style="display:flex;gap:10px;font-size:14px;color:var(--text-mid);"><span style="color:var(--blue);font-weight:700;">✓</span> Spülmaschinengeeignet (Oberfach)</li>
+                <li style="display:flex;gap:10px;font-size:14px;color:var(--text-mid);"><span style="color:var(--blue);font-weight:700;">✓</span> Für alle Hunderassen geeignet</li>
+              </ul>
+            </div>
+            <div style="background:var(--bg-light);border-radius:var(--r-lg);min-height:300px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--border-md);">
+              <!-- EMPLACEMENT IMAGE / INFOGRAPHIE -->
+              <div style="text-align:center;color:var(--text-muted);">
+                <div style="font-size:48px;margin-bottom:12px;">📸</div>
+                <p style="font-size:13px;">Infografik / Produktbild</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Materials -->
+        <div class="tab-panel" id="tab-mat">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+            <div>
+              <h3 style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--navy);margin-bottom:20px;">Material &amp; Spezifikationen</h3>
+              <table style="width:100%;border-collapse:collapse;font-size:14px;">
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 0;font-weight:600;color:var(--navy);width:40%;">Material</td>
+                  <td style="padding:12px 0;color:var(--text-mid);">Lebensmittelechter Kunststoff (PP)</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 0;font-weight:600;color:var(--navy);">BPA-frei</td>
+                  <td style="padding:12px 0;color:var(--green);">✓ Ja</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 0;font-weight:600;color:var(--navy);">Zertifizierung</td>
+                  <td style="padding:12px 0;color:var(--text-mid);">CE-zertifiziert</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 0;font-weight:600;color:var(--navy);">Spülmaschine</td>
+                  <td style="padding:12px 0;color:var(--green);">✓ Oberfach geeignet</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 0;font-weight:600;color:var(--navy);">Kapazität</td>
+                  <td style="padding:12px 0;color:var(--text-mid);">180 ml</td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 0;font-weight:600;color:var(--navy);">Farbe</td>
+                  <td style="padding:12px 0;color:var(--text-mid);">Babyblau / Hellblau</td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <h3 style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--navy);margin-bottom:20px;">Im Lieferumfang</h3>
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="display:flex;gap:12px;align-items:center;padding:14px;border-radius:var(--r-md);background:var(--bg-light);border:1px solid var(--border);">
+                  <span style="font-size:28px;">🐾</span>
+                  <div><strong style="font-size:14px;color:var(--navy);">ZenPfote Pup Bowl</strong><p style="font-size:12px;color:var(--text-muted);">Der Anti-Angst Leckerball mit 360°-Drehmechanismus</p></div>
+                </div>
+                <div style="display:flex;gap:12px;align-items:center;padding:14px;border-radius:var(--r-md);background:var(--bg-light);border:1px solid var(--border);">
+                  <span style="font-size:28px;">📋</span>
+                  <div><strong style="font-size:14px;color:var(--navy);">Bedienungsanleitung</strong><p style="font-size:12px;color:var(--text-muted);">Auf Deutsch – mit Füll-Tipps und Rezeptideen</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews tab -->
+        <div class="tab-panel" id="tab-rev">
+          <div style="display:flex;align-items:center;gap:24px;margin-bottom:32px;padding:24px;background:var(--bg-light);border-radius:var(--r-lg);">
+            <div style="text-align:center;">
+              <div style="font-family:'DM Serif Display',serif;font-size:64px;color:var(--navy);line-height:1;">4,7</div>
+              <div style="color:var(--gold);font-size:20px;margin:4px 0;">★★★★★</div>
+              <div style="font-size:13px;color:var(--text-muted);">von 48.219 Bewertungen</div>
+            </div>
+            <div style="flex:1;">
+              {% assign bars = '5,87|4,8|3,3|2,1|1,1' | split: '|' %}
+              {% for bar in bars %}
+                {% assign parts = bar | split: ',' %}
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                  <span style="font-size:12px;color:var(--text-muted);width:16px;text-align:right;">{{ parts[0] }}★</span>
+                  <div style="flex:1;height:8px;background:var(--border-md);border-radius:4px;overflow:hidden;">
+                    <div style="width:{{ parts[1] }}%;height:100%;background:var(--gold);border-radius:4px;"></div>
+                  </div>
+                  <span style="font-size:12px;color:var(--text-muted);width:30px;">{{ parts[1] }}%</span>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <div class="review-photo"><span>📸 Foto des Hundes</span></div>
+              <div class="review-title">Meine Couch ist gerettet</div>
+              <p class="review-body">Max hat innerhalb von 2 Wochen aufgehört, die Sofakissen zu zerstören. 45 Minuten Lecken, dann schläft er einfach ein.</p>
+              <div class="review-author">
+                <div class="review-avatar">SK</div>
+                <div><div class="review-name">Sandra K., München</div><div class="review-verified">✓ Verifizierter Kauf</div></div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <div class="review-photo"><span>📸 Foto des Hundes</span></div>
+              <div class="review-title">Besser als alle Beruhigungsmittel</div>
+              <p class="review-body">CBD-Öl hat nichts gebracht. ZenPfote wirkt in der ersten Sitzung. Meine Hündin war danach entspannter als nach einem 2-Stunden-Spaziergang.</p>
+              <div class="review-author">
+                <div class="review-avatar">TM</div>
+                <div><div class="review-name">Thomas M., Hamburg</div><div class="review-verified">✓ Verifizierter Kauf</div></div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <div class="review-photo"><span>📸 Foto des Hundes</span></div>
+              <div class="review-title">Endlich ruhige Nächte</div>
+              <p class="review-body">Bruno bellte jede Nacht. Jetzt füllen wir ZenPfote abends – er leckt bis er einschläft. Wir schlafen zum ersten Mal seit Monaten durch.</p>
+              <div class="review-author">
+                <div class="review-avatar">MH</div>
+                <div><div class="review-name">Markus H., Köln</div><div class="review-verified">✓ Verifizierter Kauf</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ tab -->
+        <div class="tab-panel" id="tab-faq">
+          <div class="faq-list" style="margin-top:0;">
+            <div class="faq-item">
+              <button class="faq-q">Für welche Hunderassen ist ZenPfote geeignet? <span class="faq-arrow">+</span></button>
+              <div class="faq-a">Für alle Rassen, Altersgruppen und Größen. Für sehr kleine Hunde empfehlen wir die kleinere Variante (demnächst erhältlich).</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Wie lange hält die Wirkung an? <span class="faq-arrow">+</span></button>
+              <div class="faq-a">Eine Befüllung hält durchschnittlich 30–60 Minuten. Die Beruhigungswirkung kann danach noch 1–2 Stunden anhalten.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Welche Lebensmittel kann ich verwenden? <span class="faq-arrow">+</span></button>
+              <div class="faq-a">Erdnussbutter (ohne Xylitol!), griechischer Joghurt, Nassfutter, Gemüsebrühe, Bananenpüree oder jede andere cremige Hundelekkerei.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Kann mein Hund den Ball zerkauen? <span class="faq-arrow">+</span></button>
+              <div class="faq-a">Der ZenPfote Pup Bowl ist aus robustem, lebensmittelechtem Kunststoff gefertigt und widersteht auch hartnäckigem Kauen. Bitte bei der Nutzung beaufsichtigen.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TRUST BAND
+  ══════════════════════════════════════════ -->
+  <div class="trust-band">
+    <div class="container">
+      <div class="trust-band-grid">
+        <div class="trust-item"><div class="trust-icon">🔄</div><h4>60 Tage Garantie</h4><p>Nicht zufrieden? Vollständige Rückerstattung ohne Fragen.</p></div>
+        <div class="trust-item"><div class="trust-icon">🚚</div><h4>Versand aus Deutschland</h4><p>Lieferung in 1–3 Werktagen. Kostenlos ab 49 €.</p></div>
+        <div class="trust-item"><div class="trust-icon">🏥</div><h4>Tierärztlich empfohlen</h4><p>Von Veterinären geprüft und für sicher befunden.</p></div>
+        <div class="trust-item"><div class="trust-icon">🔒</div><h4>DSGVO-konform</h4><p>Deine Daten sind sicher. Zahlung SSL-verschlüsselt.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🐾 <span>Zen</span>Pfote</div>
+          <p>Der rotierende Leckerball, der deinen Hund durch Biologie beruhigt – ohne Chemie, ohne Risiko.</p>
+          <p class="footer-copy">© 2025 ZenPfote. Alle Rechte vorbehalten.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="{{ routes.root_url }}">Startseite</a>
+          <a href="{{ routes.root_url }}products/zenpfote-pup-bowl">ZenPfote Pup Bowl</a>
+          <a href="/pages/bestellung-verfolgen">Bestellung verfolgen</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hilfe</h4>
+          <a href="/pages/kontakt">Kontakt</a>
+          <a href="/pages/versand">Versandinformationen</a>
+          <a href="{{ routes.root_url }}policies/refund-policy">Rückgabe &amp; Erstattung</a>
+          <a href="{{ routes.root_url }}#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
+          <a href="{{ routes.root_url }}policies/privacy-policy">Datenschutzerklärung</a>
+          <a href="{{ routes.root_url }}policies/terms-of-service">AGB</a>
+          <a href="/pages/impressum">Impressum</a>
+          <a href="{{ routes.root_url }}policies/refund-policy">Widerrufsrecht</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div style="font-size:12px;color:rgba(255,255,255,0.35);">Sicher &amp; verschlüsselt bezahlen:</div>
+        <div class="footer-pay">
+          <span class="pay-pill">PayPal</span><span class="pay-pill">Klarna</span><span class="pay-pill">SOFORT</span>
+          <span class="pay-pill">Visa</span><span class="pay-pill">Mastercard</span><span class="pay-pill">Apple Pay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="{{ 'zenpfote-v2.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "ZenPfote Produktseite",
+  "tag": "div",
+  "class": "zenpfote-product-v2",
+  "settings": []
+}
+{% endschema %}

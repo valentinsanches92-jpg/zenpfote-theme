@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "zenpfote_tracking": {
+      "type": "zenpfote-tracking",
+      "settings": {}
+    }
+  },
+  "order": [
+    "zenpfote_tracking"
+  ]
+}

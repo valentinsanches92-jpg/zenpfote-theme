@@ -4,7 +4,16 @@
       "Bash(git init *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(gh api *)",
+      "Bash(xargs -I{} echo \"https://github.com/{}/zenpfote-theme\")",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(cp /mnt/user-data/uploads/*.webp /Users/valentin/zenpfote-store/assets/)",
+      "Bash(cp /mnt/user-data/uploads/*.png /Users/valentin/zenpfote-store/assets/)",
+      "Bash(git -c user.email=\"valentin.sanches92@gmail.com\" -c user.name=\"Valentin\" add -A)",
+      "Bash(git -c user.email=\"valentin.sanches92@gmail.com\" -c user.name=\"Valentin\" commit -m \"Refonte complète V2 — blanc + #5DCDFF, 3 pages, carousel Swiper\")"
     ]
   }
 }

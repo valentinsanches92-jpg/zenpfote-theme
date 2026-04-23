@@ -8,12 +8,12 @@
  * ------------------------------------------------------------
  */{
   "sections": {
-    "zenpfote_homepage": {
+    "zenpfote_homepage_v2": {
       "type": "zenpfote-homepage",
       "settings": {}
     }
   },
   "order": [
-    "zenpfote_homepage"
+    "zenpfote_homepage_v2"
   ]
 }
